@@ -1,0 +1,9 @@
+CREATE TABLE tbl_posts(
+    id VARCHAR(36) NOT NULL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    user_id VARCHAR(36) NOT NULL REFERENCES tbl_users(id),
+    file_id VARCHAR(36) NOT NULL REFERENCES tbl_files(id),
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,6 @@
+CREATE TABLE tbl_files (
+    id VARCHAR(36) NOT NULL PRIMARY KEY,
+    name VARCHAR(255) UNIQUE,
+    mime_type VARCHAR(255),
+    data LONGBLOB NOT NULL
+);
